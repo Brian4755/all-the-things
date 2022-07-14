@@ -6,7 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
-
+import Cheese from './pages/Cheese/Cheese'
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
     {
@@ -145,6 +145,13 @@ const App = () => {
       attributes: ["This will work"],
     },
   ])
+  const [omarsThings, setOmarsThings] = useState([
+    {
+      name: "Omar",
+      image: "https://imgs.xkcd.com/cars/cheese.png",  
+      attributes: ["This will work"],
+    },
+  ])
 
   const [alexsThings, setAlexsThings] = useState([
     {
@@ -173,6 +180,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/cheese"
+        element={<Cheese things={huntersThings} />}
       />
     </Routes>
   )
